@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<title>Frei</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+<style>
+	body {
+		font-family: 'Roboto', sans-serif;
+		background-color: #EFEFEF;
+		color: #333333;
+		font-size: 14px;
+		margin: 0;
+	}
+	.wrapper {
+		max-width: 1110px;
+		padding-left: 15px;
+		padding-right: 15px;
+		margin: 0 auto;
+	}
+	.nav {
+		display: flex;
+		justify-content: center;
+		list-style-type: none;
+		padding: 4px 0;
+		flex-wrap: wrap;
+		margin-bottom: 4px;
+		font-size: 12px;
+	}
+	.nav > li {
+		margin-left: 15px;
+		margin-right: 15px;
+		margin-bottom: 5px;
+	}
+	.nav > li > a {
+		text-decoration: none;
+		color: #333333;
+		transition: 0.2s ease;
+	}
+	.header {
+		background: #A4CBC9;
+		padding-top: 4px;
+	}
+	.header-top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 15px 0 12px 0;
+	}
+	.logo {
+		font-family: 'Roboto', sans-serif;
+		font-style: normal;
+		font-weight: 300;
+		font-size: 48px;
+		line-height: 56px;
+		display: flex;
+		align-items: center;
+	}
+
+	#icons{
+		float: right;
+		align-items: center;
+		display: flex;
+	}
+	#icons li {
+		display: inline-block;
+		margin-right: 20px;
+	}
+	#icons a {
+		color: #000000;
+		display: block;
+	}
+
+
+	.header-center {
+		padding: 20px 0 17px 0;
+	}
+	.header-center .nav {
+		font-size: 16px;
+		margin: 0;
+	}
+	.header-center .nav > li {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	hr {
+		border: none;
+		background-color: #EFEFEF;
+		height: 1px;
+	}
+	.banner {
+		background-image: url("image 1.jpg") ;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		padding-top: 159px;
+		padding-bottom: 204px;
+		color: #fff;
+	}
+	.title {
+		font-size: 58px;
+		font-weight: 700;
+		margin-bottom: 39px;
+	}
+	.title-h2 {
+		font-size: 24px;
+		font-weight: 700;
+	}
+	.banner p {
+		margin-bottom: 57px;
+		max-width: 315px;
+		line-height: 1.5;
+	}
+	.btn {
+		color: #fff;
+		text-decoration: none;
+		border-radius: 20px;
+		border: 2px solid #4a9690;
+		background-color: transparent;
+		padding: 9px 47px;
+		transition: 0.2s ease;
+	}
+	.bg-white {
+		background-color: #fff;
+	}
+
+	.catalog {
+		padding-top: 60px;
+		padding-bottom: 133px;
+	}
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 19px 30px;
+	}
+
+	.grid-item-catalog {
+		text-align: center;
+	}
+	.grid-item-catalog .bg-white {
+		padding: 23px 30px 34px 30px;
+	}
+	.thumb {
+		margin-bottom: 14px;
+	}
+	.grid-title {
+		line-height: 1.5;
+		margin-bottom: 0;
+	}
+	.grid-price {
+		font-size: 21px;
+		font-weight: 500;
+		margin-top: 14px;
+		letter-spacing: 1px;
+		margin-bottom: 25px;
+	}
+	.grid-btn {
+		border-radius: 30px;
+		border: 2px solid #D9CAB3;;
+		color: #000000;
+		padding: 6px 41px;
+		text-decoration: none;
+		transition: 0.2s ease;
+		cursor: pointer;
+	}
+	.footer-top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: 25px;
+		padding-bottom: 23px;
+	}
+	footer-info {
+		display:flex;
+		align-items: center;
+	}
+	.footer-info span:first-child {
+		font-size: 14px;
+		margin-left: 0;
+	}
+	.footer-info span {
+		font-size: 16px;
+		margin-left: 103px;
+	}
+	.footer-info button {
+		font-size: 14px;
+		border-radius: 20px;
+		border: 2px solid #4a9690;
+		background-color: transparent;
+		padding: 10px 25px;
+		margin-left: 36px;
+		transition: 0.2s ease;
+		cursor: pointer;
+	}
+
+	.social {
+		display: flex;
+		align-items: center;
+		list-style-type: none;
+		padding-left: 0;
+	}
+	.social-item {
+		margin-right: 20px;
+	}
+	.social-item:last-child {
+		margin-right: 0;
+	}
+	.social-link {
+		display: block;
+		width: 40px;
+		height: 40px;
+		border: 2px solid #4a9690;
+		border-radius: 100%;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+	.social-gmail {
+		background-image: url("simple-icons_gmail.jpg");
+	}
+	.social-vk {
+		background-image: url("akar-icons_vk-fill.jpg");
+	}
+	.social-fb {
+		background-image: url("bx_bxl-facebook.jpg");
+	}
+	.social-instagram {
+		background-image: url("akar-icons_instagram-fill.jpg");
+	}
+	.footer-bottom {
+		display: flex;
+		justify-content: space-between;
+		color: #828282;
+		padding: 26px 0;
+		font-size: 12px;
+	}
+	.footer-bottom p {
+		margin: 0;
+	}
+	.footer-bottom a {
+		color: #828282;
+		text-decoration: none;
+		transition: 0.2s ease;
+	}
+
+	@media(max-width: 1170px) {
+		.grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		.footer-top, .footer-bottom {
+			flex-direction: column;
+		}
+		.footer-bottom {
+			text-align: center;
+			padding: 30px 0 26px 0;
+		}
+		.footer-bottom p {
+			margin: 0 0 20px 0;
+		}
+	}
+
+	@media(max-width: 800px) {
+		.logo {
+			font-size: 22px;
+		}
+		.banner {
+			background-image: none;
+			background-color: #D9CAB3;
+			opacity: 0.5;
+			text-align: center;
+			padding-top: 60px;
+			padding-bottom: 100px;
+		}
+		.banner p {
+			margin: 0 auto 57px;
+		}
+
+		.footer-info {
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+		}
+		.footer-top {
+			padding-bottom: 35px;
+		}
+		.footer-top-item {
+			margin-bottom: 20px;
+		}
+		.footer-info span {
+			font-size: 14px;
+			margin-left: 0;
+			margin-bottom: 20px;
+		}
+		.footer-info button {
+			margin-left: 0;
+		}
+	}
+	@media(max-width: 600px) {
+		.header-top {
+			flex-direction: column;
+		}
+		.logo {
+			margin-bottom: 20px;
+		}
+		.grid {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+	@media(max-width: 430px) {
+		.header-center .nav {
+			font-size: 14px;
+		}
+		.nav > li, .header-center .nav > li {
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+		.title {
+			font-size: 30px;
+		}
+	}
+</style>
+</head>
+<body>
+<header>
+	<div class="wrapper">
+		<nav>
+			<ul class="nav">
+				<li><a href="">Delivery</a></li>
+				<li><a href="">Payment</a></li>
+				<li><a href="">Reviews</a></li>
+				<li><a href="">FAQ</a></li>
+				<li><a href="">Contacts</a></li>
+			</ul>
+		</nav>
+	</div>
+		<div class="header">
+			<div class="wrapper">
+				<div class="header-top">
+					<div class="logo"><span>Frei.</span></div>
+					<div class="header-center">
+						<ul class="nav">
+							<li><a href="">All</a></li>
+							<li><a href="">Swimsuits</a></li>
+							<li><a href="">Shirts</a></li>
+							<li><a href="">Pants</a></li>
+							<li><a href="">Dresses</a></li>
+							<li><a href="">Accessories</a></li>
+						</ul>
+					</div>
+					<ul id="icons">
+							<li><a href="">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M21 21L16.514 16.506L21 21ZM19 10.5C19 12.7543 18.1045 14.9163 16.5104 16.5104C14.9163 18.1045 12.7543 19 10.5 19C8.24566 19 6.08365 18.1045 4.48959 16.5104C2.89553 14.9163 2 12.7543 2 10.5C2 8.24566 2.89553 6.08365 4.48959 4.48959C6.08365 2.89553 8.24566 2 10.5 2C12.7543 2 14.9163 2.89553 16.5104 4.48959C18.1045 6.08365 19 8.24566 19 10.5V10.5Z" stroke="black" stroke-width="2" stroke-linecap="round"/>
+								</svg>
+							</a></li>
+							<li><a href="">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M7 3C4.239 3 2 5.216 2 7.95C2 10.157 2.875 15.395 11.488 20.69C11.6423 20.7839 11.8194 20.8335 12 20.8335C12.1806 20.8335 12.3577 20.7839 12.512 20.69C21.125 15.395 22 10.157 22 7.95C22 5.216 19.761 3 17 3C14.239 3 12 6 12 6C12 6 9.761 3 7 3Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</a></li>
+							<li><a href="">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M5 7H18.79C19.0694 7.00001 19.3457 7.05857 19.6011 7.17191C19.8565 7.28524 20.0854 7.45083 20.2729 7.65801C20.4603 7.86519 20.6023 8.10936 20.6897 8.37478C20.777 8.64019 20.8078 8.92097 20.78 9.199L20.18 15.199C20.1307 15.6925 19.8997 16.1501 19.532 16.4829C19.1642 16.8157 18.686 17 18.19 17H8.64C8.17747 17.0002 7.72918 16.84 7.37144 16.5469C7.01371 16.2537 6.76866 15.8456 6.678 15.392L5 7Z" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+									<path d="M5 7L4.19 3.757C4.13583 3.54075 4.01095 3.34881 3.83521 3.21166C3.65946 3.0745 3.44293 3.00001 3.22 3H2" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M8 21H10" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M16 21H18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</a></li>
+						</ul>
+				</div>
+			</div>
+		</div>
+</header>
+<section class="banner">
+	<div class="wrapper">
+		<h1 class="title">Be yourself.</h1>
+		<p>Our clothes help you to reveal your power and make you feel confident.</p>
+		<a class="btn" href="#">See catalog</a>
+	</div>
+</section>
+<section class="catalog">
+	<div class="wrapper">
+		<h2 class="title-h2">Popular</h2>
+		<div class="grid">
+			<div class="grid-item grid-item-catalog">
+				<div class="bg-white">
+					<div class="thumb">
+						<img src="image 2.jpg" height="300" width="350"/></div>
+					<p class="grid-title">Charming</p>
+					<p class="grid-price">990$ </p>
+					<a class="grid-btn" href="#">Add to cart</a>
+				</div>
+			</div>
+			<div class="grid-item grid-item-catalog">
+				<div class="bg-white">
+					<div class="thumb">
+						<img src="image 3.jpg" height="300" width="350"/>
+					</div>
+					<p class="grid-title">Wonderful</p>
+					<p class="grid-price">890 $ </p>
+					<a class="grid-btn" href="#">Add to cart</a>
+				</div>
+			</div>
+			<div class="grid-item grid-item-catalog">
+				<div class="bg-white">
+					<div class="thumb">
+						<img src="image 5.jpg" height="300" width="350"/></div>
+					<p class="grid-title">Gorgeous</p>
+					<p class="grid-price">1090 $ </p>
+					<a class="grid-btn" href="#">Add to cart</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<footer>
+	<div class="bg-white">
+		<div class="wrapper">
+			<div class="footer-top">
+				<div class="footer-top-item">
+					<ul class="social">
+						<li class="social-item"><a class="social-link social-gmail" href="" target="_blank"></a></li>
+						<li class="social-item"><a class="social-link social-vk" href="" target="_blank"></a></li>
+						<li class="social-item"><a class="social-link social-fb" href="" target="_blank"></a></li>
+						<li class="social-item"><a class="social-link social-instagram" href="" target="_blank"></a></li>
+					</ul>
+				</div>
+				<div class="footer-info">
+					<span>198555, LA, Sweet dreams street, 20</span>
+					<span>+1 000 980 3269</span>
+					<button type="button">Callback</button>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<p>The best clothing shop (с) 2021 All rights reserved.</p>
+				<a href="#">Privacy policy</a>
+			</div>
+		</div>
+	</div>
+
+
+
+</footer>
+
+</body>
+</html>
